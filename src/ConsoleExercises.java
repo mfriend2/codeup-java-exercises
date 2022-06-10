@@ -9,7 +9,7 @@ public class ConsoleExercises {
         System.out.printf("The value of pi is approximately %.2f.%n", pi);
 
         Scanner scanner = new Scanner(System.in);
-        scanner.useDelimiter("\n");
+//        scanner.useDelimiter("\n");
 
         System.out.println("Enter a number:");
         int yourNumber = scanner.nextInt();
