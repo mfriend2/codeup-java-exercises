@@ -15,6 +15,7 @@ public class ConsoleExercises {
         int yourNumber = scanner.nextInt();
         System.out.println("You entered: " + yourNumber);
         System.out.println("Enter 3 words:");
+        // use scan.next() for this part
         String word1 = scanner.next();
         String word2 = scanner.next();
         String word3 = scanner.next();
@@ -32,6 +33,7 @@ public class ConsoleExercises {
         double width = scanner.nextDouble();
         System.out.println("The width you entered is " + width + ".");
         System.out.println("Enter the height of your classroom:");
+        // Double.parseDouble()
         double height = scanner.nextDouble();
         System.out.println("The height your entered is " + height + ".");
         // int parseLength = parseInt(length);
