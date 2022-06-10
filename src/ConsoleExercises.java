@@ -24,14 +24,18 @@ public class ConsoleExercises {
         String yourSentence = scanner.nextLine();
         System.out.println("You entered: " + yourSentence);
         System.out.println("Enter the length of your classroom:");
+        // String length = scanner.nextLine();
         double length = scanner.nextDouble();
         System.out.println("The length you entered is " + length + ".");
         System.out.println("Enter the width of your classroom:");
+        //String width = scanner.nextLine();
         double width = scanner.nextDouble();
         System.out.println("The width you entered is " + width + ".");
         System.out.println("Enter the height of your classroom:");
         double height = scanner.nextDouble();
         System.out.println("The height your entered is " + height + ".");
+        // int parseLength = parseInt(length);
+        // int parseWidth = parseInt(width);
         double roomArea = length * width;
         double roomPerimeter = (2 * length) + (2 * width);
         double roomVolume = height * roomArea;
