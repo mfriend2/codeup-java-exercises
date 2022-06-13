@@ -68,6 +68,13 @@ public class MethodsExercises {
         return num1 % num2;
     }
 
+    public static int modulusRecursion (int num1, int num2) {
+        if (num1 < num2) {
+            return num1;
+        }
+        return modulusRecursion(num1 - num2, num2);
+    }
+
     public static void main(String[] args) {
 
         System.out.println(addition(1, 2));
@@ -79,6 +86,6 @@ public class MethodsExercises {
         System.out.println(subtractionRecursion(1, 2));
         System.out.println(multiplicationRecursion(6, 5));
         System.out.println(divisionRecursion(4, 2));
-
+        System.out.println(modulusRecursion(6, 2));
     }
 }
