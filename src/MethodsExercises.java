@@ -73,28 +73,57 @@ public class MethodsExercises {
 
     public static void getInteger(int min, int max) {
         Scanner scanner = new Scanner(System.in);
-            System.out.printf("Enter a number between %d and %d.\n", min, max);
-            int userInput = scanner.nextInt();
-            if (userInput > max || userInput < min) {
-                System.out.printf("%d is not between %d and %d. Try again.\n", userInput, min, max);
-                getInteger(min,max);
-            }
-            else {
-                System.out.printf("%d is between %d and %d.", userInput, min, max);
-            }
-    }
-        public static void main (String[]args){
-
-            System.out.println(addition(1, 2));
-            System.out.println(subtraction(1, 2));
-            System.out.println(multiplication(9, 3));
-            System.out.println(division(1, 2));
-            System.out.println(modulus(1, 2));
-            System.out.println(additionRecursion(1, 2));
-            System.out.println(subtractionRecursion(1, 2));
-            System.out.println(multiplicationRecursion(6, 5));
-            System.out.println(divisionRecursion(4, 2));
-            System.out.println(modulusRecursion(6, 2));
-            getInteger(1,10);
+        System.out.printf("Enter a number between %d and %d.\n", min, max);
+        int userInput = scanner.nextInt();
+        if (userInput > max || userInput < min) {
+            System.out.printf("%d is not between %d and %d. Try again.\n", userInput, min, max);
+            getInteger(min, max);
+        } else {
+            System.out.printf("%d is between %d and %d.", userInput, min, max);
         }
     }
+
+    public static long factorial(long num) {
+        long sum = 1;
+        for (long x = 1; x <= num; x++) {
+            sum *= x;
+        }
+        return sum;
+    }
+
+    public static long highestFactorial(long num) {
+        long sum = 1;
+        for (long x = 1; x <= num; x++) {
+            sum *= x;
+        }
+        return sum;
+    }
+
+
+    public static void main(String[] args) {
+
+//            System.out.println(addition(1, 2));
+//            System.out.println(subtraction(1, 2));
+//            System.out.println(multiplication(9, 3));
+//            System.out.println(division(1, 2));
+//            System.out.println(modulus(1, 2));
+//            System.out.println(additionRecursion(1, 2));
+//            System.out.println(subtractionRecursion(1, 2));
+//            System.out.println(multiplicationRecursion(6, 5));
+//            System.out.println(divisionRecursion(4, 2));
+//            System.out.println(modulusRecursion(6, 2));
+//            getInteger(1,10);
+//        System.out.println(factorial(3));
+        Scanner scanner =new Scanner(System.in);
+//        while (true) {
+//            System.out.println("Enter a number between 1 and 10.");
+//            long num = scanner.nextLong();
+//            System.out.println(factorial(num));
+//            System.out.println("Would you like to continue? [Y/N]");
+//            String decision = scanner.next();
+//            if (decision.equalsIgnoreCase("n")) {
+//                break;
+//            }
+//        }
+    }
+}
