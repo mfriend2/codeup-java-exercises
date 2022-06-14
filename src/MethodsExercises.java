@@ -80,7 +80,7 @@ public class MethodsExercises {
             System.out.printf("%d is not between %d and %d. Try again.\n", userInput, min, max);
             getInteger(min, max);
         } else {
-            System.out.printf("%d is between %d and %d.", userInput, min, max);
+            System.out.printf("%d is between %d and %d.\n", userInput, min, max);
         }
     }
 
