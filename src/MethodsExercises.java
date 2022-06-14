@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MethodsExercises {
@@ -91,13 +92,27 @@ public class MethodsExercises {
         return sum;
     }
 
-    public static long highestFactorial(long num) {
+    public static long highestFactorial() {
         long sum = 1;
-        for (long x = 1; x <= num; x++) {
-            sum *= x;
+        long highFact = 0;
+        while (sum >= 0) {
+            sum = factorial(highFact);
+            if (sum < 0) highFact--;
+            else highFact++;
         }
-        return sum;
+        return highFact;
     }
+
+    public static int[] diceRoll (int sides) {
+        int dice1 = (int) (Math.random() * sides) + 1;
+        int dice2 = (int) (Math.random() * sides) + 1;
+        int[] result = new int[2];
+        result[0] = dice1;
+        result[1] = dice2;
+        return result;
+    }
+
+
 
 
     public static void main(String[] args) {
@@ -116,7 +131,7 @@ public class MethodsExercises {
 //        System.out.println(factorial(3));
         Scanner scanner =new Scanner(System.in);
 //        while (true) {
-//            System.out.println("Enter a number between 1 and 10.");
+//            System.out.printf("Enter a number between 1 and %d\n", highestFactorial());
 //            long num = scanner.nextLong();
 //            System.out.println(factorial(num));
 //            System.out.println("Would you like to continue? [Y/N]");
@@ -125,5 +140,17 @@ public class MethodsExercises {
 //                break;
 //            }
 //        }
+//        System.out.println(highestFactorial());
+        while (true) {
+            System.out.println("Enter the number of sides on the dice:");
+            int sides = scanner.nextInt();
+            System.out.println("Roll the dice! [Y/N]");
+            String roll = scanner.next();
+            if (roll.equalsIgnoreCase("y")) System.out.println(Arrays.toString(diceRoll(sides)));
+            if (roll.equalsIgnoreCase("n")) break;
+            System.out.println("Would you like to roll again? [Y/N]");
+            String rollAgain = scanner.next();
+            if (rollAgain.equalsIgnoreCase("n")) break;
+        }
     }
 }
