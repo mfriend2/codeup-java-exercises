@@ -38,27 +38,27 @@ public class ConsoleAdventureGame {
                     if (wearArmor.equalsIgnoreCase("y") && armorRemaining > 0) {
                         heroHealth += armor;
                         armorRemaining--;
-                        System.out.printf("Your health has increased to %d. You have %d armor remaining.", heroHealth, armorRemaining);
+                        System.out.printf("Your health has increased to %d. You have %d armor remaining.\n", heroHealth, armorRemaining);
                     }
                     while (mummyHealth > 0 && heroHealth > 0) {
                         int enemyDamage = mummyAttackPower();
                         int heroDamage = heroAttackPower();
                         mummyHealth -= heroDamage;
-                        System.out.printf("You attacked the mummy and dealt %d damage.\n%s's health is %d and the mummy's health is %d.\n", heroDamage, playerName, heroHealth, mummyHealth);
+                        System.out.printf("You attacked the mummy and dealt %d damage.\nThe mummy has %d health remaining.\n", heroDamage, mummyHealth);
                         if (mummyHealth <= 0) {
                             System.out.println("The mummy has died.");
                             break;
                         }
                         heroHealth -= enemyDamage;
-                        System.out.printf("The mummy attacks back and deals %d damage to %s.\n%s has %d health remaining and the mummy has %d health remaining.\n", enemyDamage, playerName, playerName, heroHealth, mummyHealth);
-                        while (potionRemaining > 0) {
+                        System.out.printf("The mummy attacks back and deals %d damage to %s.\n%s has %d health remaining.\n", enemyDamage, playerName, playerName, heroHealth);
+                        while (potionRemaining > 0 && mummyHealth > heroHealth) {
                             System.out.println("Would you like to drink a potion to increase your health by 5? [Y/N]");
                             String potionDrink = scanner.next();
                             if (potionDrink.equalsIgnoreCase("n")) break;
                             if (potionDrink.equalsIgnoreCase("y")) {
                                 heroHealth += potionIncrease;
                                 potionRemaining--;
-                                System.out.printf("Your health is now %d. You have %d potions remaining.", heroHealth, potionRemaining);
+                                System.out.printf("Your health is now %d. You have %d potions remaining.\n", heroHealth, potionRemaining);
                                 break;
                             }
                         }
@@ -81,27 +81,27 @@ public class ConsoleAdventureGame {
                     if (wearArmor.equalsIgnoreCase("y") && armorRemaining > 0) {
                         heroHealth += armor;
                         armorRemaining--;
-                        System.out.printf("Your health has increased to %d. You have %d armor remaining.", heroHealth, armorRemaining);
+                        System.out.printf("Your health has increased to %d. You have %d armor remaining.\n", heroHealth, armorRemaining);
                     }
                     while (dragonHealth > 0 && heroHealth > 0) {
                         int enemyDamage = dragonAttackPower();
                         int heroDamage = heroAttackPower();
                         dragonHealth -= heroDamage;
-                        System.out.printf("You attacked the dragon and dealt %d damage.\n%s's health is %d and the dragon's health is %d.\n", heroDamage, playerName, heroHealth, dragonHealth);
+                        System.out.printf("You attacked the dragon and dealt %d damage.\nThe dragon has %d health remaining.\n", heroDamage, dragonHealth);
                         if (dragonHealth <= 0) {
                             System.out.println("The dragon has died.");
                             break;
                         }
                         heroHealth -= enemyDamage;
-                        System.out.printf("The dragon attacks back and deals %d damage to %s.\n%s has %d health remaining and the dragon has %d health remaining.\n", enemyDamage, playerName, playerName, heroHealth, dragonHealth);
-                        while (potionRemaining > 0) {
+                        System.out.printf("The dragon attacks back and deals %d damage to %s.\n%s has %d health remaining.\n", enemyDamage, playerName, playerName, heroHealth);
+                        while (potionRemaining > 0 && dragonHealth > heroHealth) {
                             System.out.println("Would you like to drink a potion to increase your health by 5? [Y/N]");
                             String potionDrink = scanner.next();
                             if (potionDrink.equalsIgnoreCase("n")) break;
                             if (potionDrink.equalsIgnoreCase("y")) {
                                 heroHealth += potionIncrease;
                                 potionRemaining--;
-                                System.out.printf("Your health is now %d. You have %d potions remaining.", heroHealth, potionRemaining);
+                                System.out.printf("Your health is now %d. You have %d potions remaining.\n", heroHealth, potionRemaining);
                                 break;
                             }
                         }
@@ -124,27 +124,27 @@ public class ConsoleAdventureGame {
                     if (wearArmor.equalsIgnoreCase("y") && armorRemaining > 0) {
                         heroHealth += armor;
                         armorRemaining--;
-                        System.out.printf("Your health has increased to %d. You have %d armor remaining.", heroHealth, armorRemaining);
+                        System.out.printf("Your health has increased to %d. You have %d armor remaining.\n", heroHealth, armorRemaining);
                     }
                     while (ogreHealth > 0 && heroHealth > 0) {
                         int enemyDamage = ogreAttackPower();
                         int heroDamage = heroAttackPower();
                         ogreHealth -= heroDamage;
-                        System.out.printf("You attacked the ogre and dealt %d damage.\n%s's health is %d and the ogre's health is %d.\n", heroDamage, playerName, heroHealth, ogreHealth);
+                        System.out.printf("You attacked the ogre and dealt %d damage.\nThe ogre has %d health remaining.\n", heroDamage, ogreHealth);
                         if (ogreHealth <= 0) {
                             System.out.println("The ogre has died.");
                             break;
                         }
                         heroHealth -= enemyDamage;
-                        System.out.printf("The ogre attacks back and deals %d damage to %s.\n%s has %d health remaining and the ogre has %d health remaining.\n", enemyDamage, playerName, playerName, heroHealth, ogreHealth);
-                        while (potionRemaining > 0) {
+                        System.out.printf("The ogre attacks back and deals %d damage to %s.\n%s has %d health remaining.\n", enemyDamage, playerName, playerName, heroHealth);
+                        while (potionRemaining > 0 && ogreHealth > heroHealth) {
                             System.out.println("Would you like to drink a potion to increase your health by 5? [Y/N]");
                             String potionDrink = scanner.next();
                             if (potionDrink.equalsIgnoreCase("n")) break;
                             if (potionDrink.equalsIgnoreCase("y")) {
                                 heroHealth += potionIncrease;
                                 potionRemaining--;
-                                System.out.printf("Your health is now %d. You have %d potions remaining.", heroHealth, potionRemaining);
+                                System.out.printf("Your health is now %d. You have %d potions remaining.\n", heroHealth, potionRemaining);
                                 break;
                             }
                         }
