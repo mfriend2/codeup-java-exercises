@@ -103,7 +103,7 @@ public class MethodsExercises {
         return highFact;
     }
 
-    public static int[] diceRoll (int sides) {
+    public static int[] diceRoll(int sides) {
         int dice1 = (int) (Math.random() * sides) + 1;
         int dice2 = (int) (Math.random() * sides) + 1;
         int[] result = new int[2];
@@ -112,35 +112,32 @@ public class MethodsExercises {
         return result;
     }
 
-
-
-
     public static void main(String[] args) {
 
-//            System.out.println(addition(1, 2));
-//            System.out.println(subtraction(1, 2));
-//            System.out.println(multiplication(9, 3));
-//            System.out.println(division(1, 2));
-//            System.out.println(modulus(1, 2));
-//            System.out.println(additionRecursion(1, 2));
-//            System.out.println(subtractionRecursion(1, 2));
-//            System.out.println(multiplicationRecursion(6, 5));
-//            System.out.println(divisionRecursion(4, 2));
-//            System.out.println(modulusRecursion(6, 2));
-//            getInteger(1,10);
-//        System.out.println(factorial(3));
-        Scanner scanner =new Scanner(System.in);
-//        while (true) {
-//            System.out.printf("Enter a number between 1 and %d\n", highestFactorial());
-//            long num = scanner.nextLong();
-//            System.out.println(factorial(num));
-//            System.out.println("Would you like to continue? [Y/N]");
-//            String decision = scanner.next();
-//            if (decision.equalsIgnoreCase("n")) {
-//                break;
-//            }
-//        }
-//        System.out.println(highestFactorial());
+        System.out.println(addition(1, 2));
+        System.out.println(subtraction(1, 2));
+        System.out.println(multiplication(9, 3));
+        System.out.println(division(1, 2));
+        System.out.println(modulus(1, 2));
+        System.out.println(additionRecursion(1, 2));
+        System.out.println(subtractionRecursion(1, 2));
+        System.out.println(multiplicationRecursion(6, 5));
+        System.out.println(divisionRecursion(4, 2));
+        System.out.println(modulusRecursion(6, 2));
+        getInteger(1, 10);
+        System.out.println(factorial(3));
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.printf("Enter a number between 1 and %d\n", highestFactorial());
+            long num = scanner.nextLong();
+            System.out.println(factorial(num));
+            System.out.println("Would you like to continue? [Y/N]");
+            String decision = scanner.next();
+            if (decision.equalsIgnoreCase("n")) {
+                break;
+            }
+        }
+        System.out.println(highestFactorial());
         while (true) {
             System.out.println("Enter the number of sides on the dice:");
             int sides = scanner.nextInt();
