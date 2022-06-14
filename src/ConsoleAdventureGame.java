@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Scanner;
 
 public class ConsoleAdventureGame {
@@ -20,7 +21,7 @@ public class ConsoleAdventureGame {
                 System.out.println("Enter your first name:");
                 String playerName = scanner.next();
                 System.out.printf("Hello %s!\n", playerName);
-                System.out.printf("Where would you like to travel? [The %s, the %s, or the %s]\n", ruins, castle, forest);
+                System.out.printf("Where would you like to travel? [%s, %s, or %s]\n", ruins.toUpperCase(), castle.toUpperCase(), forest.toUpperCase());
                 String location = scanner.next();
                 System.out.printf("%s has chosen to travel to the %s.\n", playerName, location);
                 if (location.equalsIgnoreCase("ruins")) {
