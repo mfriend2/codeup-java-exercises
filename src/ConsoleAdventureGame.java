@@ -41,7 +41,7 @@ public class ConsoleAdventureGame {
                         heroHealth -= enemyDamage;
                         System.out.printf("The mummy attacks back and deals %d damage to %s.\n%s has %d health remaining and the mummy has %d health remaining.\n", enemyDamage, playerName, playerName, heroHealth, mummyHealth);
                         while (potionRemaining > 0) {
-                            System.out.println("Would you like to drink a potion to increase your health? [Y/N]");
+                            System.out.println("Would you like to drink a potion to increase your health by 5? [Y/N]");
                             String potionDrink = scanner.next();
                             if (potionDrink.equalsIgnoreCase("n")) break;
                             if (potionDrink.equalsIgnoreCase("y")) {
@@ -74,7 +74,7 @@ public class ConsoleAdventureGame {
                         heroHealth -= enemyDamage;
                         System.out.printf("The dragon attacks back and deals %d damage to %s.\n%s has %d health remaining and the dragon has %d health remaining.\n", enemyDamage, playerName, playerName, heroHealth, dragonHealth);
                         while (potionRemaining > 0) {
-                            System.out.println("Would you like to drink a potion to increase your health? [Y/N]");
+                            System.out.println("Would you like to drink a potion to increase your health by 5? [Y/N]");
                             String potionDrink = scanner.next();
                             if (potionDrink.equalsIgnoreCase("n")) break;
                             if (potionDrink.equalsIgnoreCase("y")) {
@@ -107,7 +107,7 @@ public class ConsoleAdventureGame {
                         heroHealth -= enemyDamage;
                         System.out.printf("The ogre attacks back and deals %d damage to %s.\n%s has %d health remaining and the ogre has %d health remaining.\n", enemyDamage, playerName, playerName, heroHealth, ogreHealth);
                         while (potionRemaining > 0) {
-                            System.out.println("Would you like to drink a potion to increase your health? [Y/N]");
+                            System.out.println("Would you like to drink a potion to increase your health by 5? [Y/N]");
                             String potionDrink = scanner.next();
                             if (potionDrink.equalsIgnoreCase("n")) break;
                             if (potionDrink.equalsIgnoreCase("y")) {
