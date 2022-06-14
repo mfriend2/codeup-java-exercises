@@ -18,7 +18,7 @@ public class ConsoleAdventureGame {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Do you want to start the game? [Y/N]");
             String startGame = scanner.next();
-            do {
+            while (startGame.equalsIgnoreCase("y")) {
                 System.out.println("Enter your first name:");
                 String playerName = scanner.next();
                 System.out.printf("Hello %s!\n", playerName);
@@ -158,7 +158,7 @@ public class ConsoleAdventureGame {
                 if (mummyHealth <= 0) break;
                 if (dragonHealth <= 0) break;
                 if (ogreHealth <= 0) break;
-            } while (startGame.equalsIgnoreCase("y"));
+            }
             System.out.println("Do you want to play again? [Y/N]");
             String playAgain = scanner.next();
             if (playAgain.equalsIgnoreCase("n")) break;
