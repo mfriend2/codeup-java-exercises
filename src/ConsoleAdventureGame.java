@@ -30,7 +30,7 @@ public class ConsoleAdventureGame {
                     System.out.println("Would you like to run or attack? [RUN/ATTACK]");
                     String runOrAttack = scanner.next();
                     if (runOrAttack.equalsIgnoreCase("run")) {
-                        System.out.println("\n> You were too afraid to fight. You have dishonored your family.\n");
+                        System.out.println(ANSI_RED + "\n> You were too afraid to fight. You have dishonored your family.\n" + ANSI_RESET);
                         break;
                     }
                     System.out.println("\nWould you like to wear your armor? [Y/N]");
@@ -38,7 +38,7 @@ public class ConsoleAdventureGame {
                     if (wearArmor.equalsIgnoreCase("y") && armorRemaining > 0) {
                         heroHealth += armor;
                         armorRemaining--;
-                        System.out.printf("\n> Your health has increased to %d. You have %d armor remaining.\n", heroHealth, armorRemaining);
+                        System.out.printf("\n> Your health has increased to " + ANSI_GREEN + "%d." + ANSI_RESET + " You have " + ANSI_RED + "%d" + ANSI_RESET + " armor remaining.\n\n", heroHealth, armorRemaining);
                     }
                     while (mummyHealth > 0 && heroHealth > 0) {
                         int enemyDamage = mummyAttackPower();
@@ -48,24 +48,24 @@ public class ConsoleAdventureGame {
                         if (randomNum > .5) {
                             mummyHealth -= strongAttack;
                             if (mummyHealth <= 0) mummyHealth = 0;
-                            System.out.printf("%s swings their sword and deals %d damage.\n", playerName, strongAttack);
+                            System.out.printf("%s swings their sword and deals " + ANSI_BLUE + "%d" + ANSI_RESET + " damage.\n", playerName, strongAttack);
                             System.out.println("\n[O\\\\\\\\\\[========================-\n");
-                            System.out.printf("> Mummy's health: %d\n", mummyHealth);
+                            System.out.printf("> Mummy's health: " + ANSI_RED + "%d" + ANSI_RESET + "\n", mummyHealth);
                         }
                         if (randomNum < .5) {
                             mummyHealth -= weakAttack;
                             if (mummyHealth <= 0) mummyHealth = 0;
-                            System.out.printf("%s shoots a bow and deals %d damage.\n", playerName, weakAttack);
+                            System.out.printf("%s shoots a bow and deals " + ANSI_BLUE + "%d" + ANSI_RESET + " damage.\n", playerName, weakAttack);
                             System.out.println("\n>>>>>----------------------->\n");
-                            System.out.printf("> Mummy's health: %d\n", mummyHealth);
+                            System.out.printf("> Mummy's health: " + ANSI_RED + "%d" + ANSI_RESET + "\n", mummyHealth);
                         }
                         if (mummyHealth <= 0) {
-                            System.out.println("\n> The mummy has died.\n");
+                            System.out.println(ANSI_RED + "\n> The mummy has died.\n" + ANSI_RESET);
                             break;
                         }
                         heroHealth -= enemyDamage;
                         if (heroHealth <= 0) heroHealth = 0;
-                        System.out.printf("\nMummy attacks back and deals %d damage.\n\n> %s's health: %d\n\n", enemyDamage, playerName, heroHealth);
+                        System.out.printf("\nMummy attacks back and deals " + ANSI_PURPLE + "%d" + ANSI_RESET + " damage.\n\n> %s's health: " + ANSI_RED + "%d" + ANSI_RESET + "\n\n", enemyDamage, playerName, heroHealth);
                         while (potionRemaining > 0 && mummyHealth > heroHealth) {
                             System.out.println("\nWould you like to drink a potion to increase your health by 5? [Y/N]\n");
                             String potionDrink = scanner.next();
@@ -73,12 +73,12 @@ public class ConsoleAdventureGame {
                             if (potionDrink.equalsIgnoreCase("y")) {
                                 heroHealth += potionIncrease;
                                 potionRemaining--;
-                                System.out.printf("\n> Your health is now %d. You have %d potions remaining.\n", heroHealth, potionRemaining);
+                                System.out.printf("\n> Your health is now " + ANSI_GREEN + "%d" + ANSI_RESET + ". You have " + ANSI_RED + "%d" + ANSI_RESET + " potion remaining.\n\n", heroHealth, potionRemaining);
                                 break;
                             }
                         }
                         if (heroHealth <= 0) {
-                            System.out.printf("\n> %s has died.\n", playerName);
+                            System.out.printf(ANSI_RED + "\n> %s has died.\n" + ANSI_RESET, playerName);
                             break;
                         }
                     }
@@ -88,7 +88,7 @@ public class ConsoleAdventureGame {
                     System.out.println("Would you like to run or attack? [RUN/ATTACK]");
                     String runOrAttack = scanner.next();
                     if (runOrAttack.equalsIgnoreCase("run")) {
-                        System.out.println("\n> You were to afraid too fight. You have dishonored your family.\n");
+                        System.out.println(ANSI_RED + "\n> You were too afraid to fight. You have dishonored your family.\n" + ANSI_RESET);
                         break;
                     }
                     System.out.println("\nWould you like to wear your armor? [Y/N]");
@@ -96,7 +96,7 @@ public class ConsoleAdventureGame {
                     if (wearArmor.equalsIgnoreCase("y") && armorRemaining > 0) {
                         heroHealth += armor;
                         armorRemaining--;
-                        System.out.printf("\n> Your health has increased to %d. You have %d armor remaining.\n", heroHealth, armorRemaining);
+                        System.out.printf("\n> Your health has increased to " + ANSI_GREEN + "%d." + ANSI_RESET + " You have " + ANSI_RED + "%d" + ANSI_RESET + " armor remaining.\n\n", heroHealth, armorRemaining);
                     }
                     while (dragonHealth > 0 && heroHealth > 0) {
                         int enemyDamage = dragonAttackPower();
@@ -106,24 +106,24 @@ public class ConsoleAdventureGame {
                         if (randomNum > .5) {
                             dragonHealth -= strongAttack;
                             if (dragonHealth <= 0) dragonHealth = 0;
-                            System.out.printf("%s swings their sword and deals %d damage.\n", playerName, strongAttack);
+                            System.out.printf("%s swings their sword and deals " + ANSI_BLUE + "%d" + ANSI_RESET + " damage.\n", playerName, strongAttack);
                             System.out.println("\n[O\\\\\\\\\\[========================-\n");
-                            System.out.printf("> Dragon's health: %d\n", dragonHealth);
+                            System.out.printf("> Dragon's health: " + ANSI_RED + "%d" + ANSI_RESET + "\n", dragonHealth);
                         }
                         if (randomNum < .5) {
                             dragonHealth -= weakAttack;
                             if (dragonHealth <= 0) dragonHealth = 0;
-                            System.out.printf("%s shoots a bow and deals %d damage.\n", playerName, weakAttack);
+                            System.out.printf("%s shoots a bow and deals " + ANSI_BLUE + "%d" + ANSI_RESET + " damage.\n", playerName, weakAttack);
                             System.out.println("\n>>>>>----------------------->\n");
-                            System.out.printf("> Dragon's health: %d\n", dragonHealth);
+                            System.out.printf("> Dragon's health: " + ANSI_RED + "%d" + ANSI_RESET + "\n", dragonHealth);
                         }
                         if (dragonHealth <= 0) {
-                            System.out.println("\n> The dragon has died.\n");
+                            System.out.println(ANSI_RED + "\n> The dragon has died.\n" + ANSI_RESET);
                             break;
                         }
                         heroHealth -= enemyDamage;
                         if (heroHealth <= 0) heroHealth = 0;
-                        System.out.printf("\nThe dragon attacks back and deals %d damage.\n\n> %s's health: %d\n\n", enemyDamage, playerName, heroHealth);
+                        System.out.printf("\nDragon attacks back and deals " + ANSI_PURPLE + "%d" + ANSI_RESET + " damage.\n\n> %s's health: " + ANSI_RED + "%d" + ANSI_RESET + "\n\n", enemyDamage, playerName, heroHealth);
                         while (potionRemaining > 0 && dragonHealth > heroHealth) {
                             System.out.println("\nWould you like to drink a potion to increase your health by 5? [Y/N]");
                             String potionDrink = scanner.next();
@@ -131,12 +131,12 @@ public class ConsoleAdventureGame {
                             if (potionDrink.equalsIgnoreCase("y")) {
                                 heroHealth += potionIncrease;
                                 potionRemaining--;
-                                System.out.printf("\n> Your health is now %d. You have %d potions remaining.\n", heroHealth, potionRemaining);
+                                System.out.printf("\n> Your health is now " + ANSI_GREEN + "%d" + ANSI_RESET + ". You have " + ANSI_RED + "%d" + ANSI_RESET + " potion remaining.\n\n", heroHealth, potionRemaining);
                                 break;
                             }
                         }
                         if (heroHealth <= 0) {
-                            System.out.printf("\n> %s has died.\n", playerName);
+                            System.out.printf(ANSI_RED + "\n> %s has died.\n" + ANSI_RESET, playerName);
                             break;
                         }
                     }
@@ -146,7 +146,7 @@ public class ConsoleAdventureGame {
                     System.out.println("\nWould you like to run or attack? [RUN/ATTACK]");
                     String runOrAttack = scanner.next();
                     if (runOrAttack.equalsIgnoreCase("run")) {
-                        System.out.println("\n> You were too afraid to fight. You have dishonored your family.\n");
+                        System.out.println(ANSI_RED + "\n> You were too afraid to fight. You have dishonored your family.\n" + ANSI_RESET);
                         break;
                     }
                     System.out.println("\nWould you like to wear your armor? [Y/N]");
@@ -154,7 +154,7 @@ public class ConsoleAdventureGame {
                     if (wearArmor.equalsIgnoreCase("y") && armorRemaining > 0) {
                         heroHealth += armor;
                         armorRemaining--;
-                        System.out.printf("\n> Your health has increased to %d. You have %d armor remaining.\n", heroHealth, armorRemaining);
+                        System.out.printf("\n> Your health has increased to " + ANSI_GREEN + "%d." + ANSI_RESET + " You have " + ANSI_RED + "%d" + ANSI_RESET + " armor remaining.\n\n", heroHealth, armorRemaining);
                     }
                     while (ogreHealth > 0 && heroHealth > 0) {
                         int enemyDamage = ogreAttackPower();
@@ -164,24 +164,24 @@ public class ConsoleAdventureGame {
                         if (randomNum > .5) {
                             ogreHealth -= strongAttack;
                             if (ogreHealth <= 0) ogreHealth = 0;
-                            System.out.printf("%s swings their sword and deals %d damage.\n", playerName, strongAttack);
+                            System.out.printf("%s swings their sword and deals " + ANSI_BLUE + "%d" + ANSI_RESET + " damage.\n", playerName, strongAttack);
                             System.out.println("\n[O\\\\\\\\\\[========================-\n");
-                            System.out.printf("> Ogre's health: %d\n", ogreHealth);
+                            System.out.printf("> Ogre's health: " + ANSI_RED + "%d" + ANSI_RESET + "\n", ogreHealth);
                         }
                         if (randomNum < .5) {
                             ogreHealth -= weakAttack;
                             if (ogreHealth <= 0) ogreHealth = 0;
-                            System.out.printf("%s shoots a bow and deals %d damage.\n", playerName, weakAttack);
+                            System.out.printf("%s shoots a bow and deals " + ANSI_BLUE + "%d" + ANSI_RESET + " damage.\n", playerName, weakAttack);
                             System.out.println("\n>>>>>----------------------->\n");
-                            System.out.printf("> Ogre's health: %d\n", ogreHealth);
+                            System.out.printf("> Ogre's health: " + ANSI_RED + "%d" + ANSI_RESET + "\n", ogreHealth);
                         }
                         if (ogreHealth <= 0) {
-                            System.out.println("\n> The ogre has died.\n");
+                            System.out.println(ANSI_RED + "\n> The ogre has died.\n" + ANSI_RESET);
                             break;
                         }
                         heroHealth -= enemyDamage;
                         if (heroHealth <= 0) heroHealth = 0;
-                        System.out.printf("\nThe ogre attacks back and deals %d damage.\n\n> %s's health: %d\n\n", enemyDamage, playerName, heroHealth);
+                        System.out.printf("\nOgre attacks back and deals " + ANSI_PURPLE + "%d" + ANSI_RESET + " damage.\n\n> %s's health: " + ANSI_RED + "%d" + ANSI_RESET + "\n\n", enemyDamage, playerName, heroHealth);
                         while (potionRemaining > 0 && ogreHealth > heroHealth) {
                             System.out.println("\nWould you like to drink a potion to increase your health by 5? [Y/N]");
                             String potionDrink = scanner.next();
@@ -189,12 +189,12 @@ public class ConsoleAdventureGame {
                             if (potionDrink.equalsIgnoreCase("y")) {
                                 heroHealth += potionIncrease;
                                 potionRemaining--;
-                                System.out.printf("\n> Your health is now %d. You have %d potions remaining.\n", heroHealth, potionRemaining);
+                                System.out.printf("\n> Your health is now " + ANSI_GREEN + "%d" + ANSI_RESET + ". You have " + ANSI_RED + "%d" + ANSI_RESET + " potion remaining.\n\n", heroHealth, potionRemaining);
                                 break;
                             }
                         }
                         if (heroHealth <= 0) {
-                            System.out.printf("\n> %s has died.\n", playerName);
+                            System.out.printf(ANSI_RED + "\n> %s has died.\n" + ANSI_RESET, playerName);
                             break;
                         }
                     }
@@ -244,6 +244,16 @@ public class ConsoleAdventureGame {
         int armor = 25;
         return armor;
     }
+
+    public static final String ANSI_RESET = "\u001B[0m";
+
+    public static final String ANSI_RED = "\u001B[31m";
+
+    public static final String ANSI_GREEN = "\u001B[32m";
+
+    public static final String ANSI_BLUE = "\u001B[34m";
+
+    public static final String ANSI_PURPLE = "\u001B[35m";
 
     public static void main(String[] args) {
         gameStart();
