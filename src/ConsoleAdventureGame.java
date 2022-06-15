@@ -60,7 +60,47 @@ public class ConsoleAdventureGame {
                             System.out.printf("> Mummy's health: " + ANSI_RED + "%d" + ANSI_RESET + "\n", mummyHealth);
                         }
                         if (mummyHealth <= 0) {
-                            System.out.println(ANSI_RED + "\n> The mummy has died.\n" + ANSI_RESET);
+                            System.out.println(ANSI_RED + "\n> You killed the mummy.\n" + ANSI_RESET);
+                            System.out.println("                                                       |\n" +
+                                    "                                                        \\.\n" +
+                                    "                                                        /|.\n" +
+                                    "                                                      /  `|.\n" +
+                                    "                                                    /     |.\n" +
+                                    "                                                  /       |.\n" +
+                                    "                                                /         `|.\n" +
+                                    "                                              /            |.\n" +
+                                    "                                            /              |.\n" +
+                                    "                                          /                |.\n" +
+                                    "     __                                 /                  `|.\n" +
+                                    "      -\\                              /                     |.\n" +
+                                    "        \\\\                          /                       |.\n" +
+                                    "          \\\\                      /                         |.\n" +
+                                    "           \\|                   /                           |\\\n" +
+                                    "             \\#####\\          /                             ||\n" +
+                                    "         ==###########>     /                               ||\n" +
+                                    "          \\##==      \\    /                                 ||\n" +
+                                    "     ______ =       =|__/___                                ||\n" +
+                                    " ,--' ,----`-,__ ___/'  --,-`-==============================##==========>\n" +
+                                    "\\               '        ##_______ ______   ______,--,____,=##,__\n" +
+                                    " `,    __==    ___,-,__,--'#'  ==='      `-'              | ##,-/\n" +
+                                    "   `-,____,---'       \\####\\              |        ____,--\\_##,/\n" +
+                                    "       #_              |##   \\  _____,---==,__,---'         ##\n" +
+                                    "        #              ]===--==\\                            ||\n" +
+                                    "        #,             ]         \\                          ||\n" +
+                                    "         #_            |           \\                        ||\n" +
+                                    "          ##_       __/'             \\                      ||\n" +
+                                    "           ####='     |                \\                    |/\n" +
+                                    "            ###       |                  \\                  |.\n" +
+                                    "            ##       _'                    \\                |.\n" +
+                                    "           ###=======]                       \\              |.\n" +
+                                    "          ///        |                         \\           ,|.\n" +
+                                    "          //         |                           \\         |.\n" +
+                                    "                                                   \\      ,|.\n" +
+                                    "                                                     \\    |.\n" +
+                                    "                                                       \\  |.\n" +
+                                    "                                                         \\|.\n" +
+                                    "                                                         /.\n" +
+                                    "                                                        |");
                             break;
                         }
                         heroHealth -= enemyDamage;
@@ -79,6 +119,27 @@ public class ConsoleAdventureGame {
                         }
                         if (heroHealth <= 0) {
                             System.out.printf(ANSI_RED + "\n> %s has died.\n" + ANSI_RESET, playerName);
+                            System.out.println("...\n" +
+                                    "             ;::::;\n" +
+                                    "           ;::::; :;\n" +
+                                    "         ;:::::'   :;\n" +
+                                    "        ;:::::;     ;.\n" +
+                                    "       ,:::::'       ;           OOO\\\n" +
+                                    "       ::::::;       ;          OOOOO\\\n" +
+                                    "       ;:::::;       ;         OOOOOOOO\n" +
+                                    "      ,;::::::;     ;'         / OOOOOOO\n" +
+                                    "    ;:::::::::`. ,,,;.        /  / DOOOOOO\n" +
+                                    "  .';:::::::::::::::::;,     /  /     DOOOO\n" +
+                                    " ,::::::;::::::;;;;::::;,   /  /        DOOO\n" +
+                                    ";`::::::`'::::::;;;::::: ,#/  /          DOOO\n" +
+                                    ":`:::::::`;::::::;;::: ;::#  /            DOOO\n" +
+                                    "::`:::::::`;:::::::: ;::::# /              DOO\n" +
+                                    "`:`:::::::`;:::::: ;::::::#/               DOO\n" +
+                                    " :::`:::::::`;; ;:::::::::##                OO\n" +
+                                    " ::::`:::::::`;::::::::;:::#                OO\n" +
+                                    " `:::::`::::::::::::;'`:;::#                O\n" +
+                                    "  `:::::`::::::::;' /  / `:#\n" +
+                                    "   ::::::`:::::;'  /  /   `#");
                             break;
                         }
                     }
@@ -118,7 +179,27 @@ public class ConsoleAdventureGame {
                             System.out.printf("> Dragon's health: " + ANSI_RED + "%d" + ANSI_RESET + "\n", dragonHealth);
                         }
                         if (dragonHealth <= 0) {
-                            System.out.println(ANSI_RED + "\n> The dragon has died.\n" + ANSI_RESET);
+                            System.out.println(ANSI_RED + "\n> You slayed the dragon.\n" + ANSI_RESET);
+                            System.out.println("  _,.\n" +
+                                    "    ,` -.)\n" +
+                                    "   ( _/-\\\\-._\n" +
+                                    "  /,|`--._,-^|            ,\n" +
+                                    "  \\_| |`-._/||          ,'|\n" +
+                                    "    |  `-, / |         /  /\n" +
+                                    "    |     || |        /  /\n" +
+                                    "     `r-._||/   __   /  /\n" +
+                                    " __,-<_     )`-/  `./  /\n" +
+                                    "'  \\   `---'   \\   /  /\n" +
+                                    "    |           |./  /\n" +
+                                    "    /           //  /\n" +
+                                    "\\_/' \\         |/  /\n" +
+                                    " |    |   _,^-'/  /\n" +
+                                    " |    , ``  (\\/  /_\n" +
+                                    "  \\,.->._    \\X-=/^\n" +
+                                    "  (  /   `-._//^`\n" +
+                                    "   `Y-.____(__}\n" +
+                                    "    |     {__)\n" +
+                                    "          ()");
                             break;
                         }
                         heroHealth -= enemyDamage;
@@ -137,6 +218,27 @@ public class ConsoleAdventureGame {
                         }
                         if (heroHealth <= 0) {
                             System.out.printf(ANSI_RED + "\n> %s has died.\n" + ANSI_RESET, playerName);
+                            System.out.println("...\n" +
+                                    "             ;::::;\n" +
+                                    "           ;::::; :;\n" +
+                                    "         ;:::::'   :;\n" +
+                                    "        ;:::::;     ;.\n" +
+                                    "       ,:::::'       ;           OOO\\\n" +
+                                    "       ::::::;       ;          OOOOO\\\n" +
+                                    "       ;:::::;       ;         OOOOOOOO\n" +
+                                    "      ,;::::::;     ;'         / OOOOOOO\n" +
+                                    "    ;:::::::::`. ,,,;.        /  / DOOOOOO\n" +
+                                    "  .';:::::::::::::::::;,     /  /     DOOOO\n" +
+                                    " ,::::::;::::::;;;;::::;,   /  /        DOOO\n" +
+                                    ";`::::::`'::::::;;;::::: ,#/  /          DOOO\n" +
+                                    ":`:::::::`;::::::;;::: ;::#  /            DOOO\n" +
+                                    "::`:::::::`;:::::::: ;::::# /              DOO\n" +
+                                    "`:`:::::::`;:::::: ;::::::#/               DOO\n" +
+                                    " :::`:::::::`;; ;:::::::::##                OO\n" +
+                                    " ::::`:::::::`;::::::::;:::#                OO\n" +
+                                    " `:::::`::::::::::::;'`:;::#                O\n" +
+                                    "  `:::::`::::::::;' /  / `:#\n" +
+                                    "   ::::::`:::::;'  /  /   `#");
                             break;
                         }
                     }
@@ -176,7 +278,27 @@ public class ConsoleAdventureGame {
                             System.out.printf("> Ogre's health: " + ANSI_RED + "%d" + ANSI_RESET + "\n", ogreHealth);
                         }
                         if (ogreHealth <= 0) {
-                            System.out.println(ANSI_RED + "\n> The ogre has died.\n" + ANSI_RESET);
+                            System.out.println(ANSI_RED + "\n> You killed the ogre.\n" + ANSI_RESET);
+                            System.out.println("  _,.\n" +
+                                    "    ,` -.)\n" +
+                                    "   ( _/-\\\\-._\n" +
+                                    "  /,|`--._,-^|            ,\n" +
+                                    "  \\_| |`-._/||          ,'|\n" +
+                                    "    |  `-, / |         /  /\n" +
+                                    "    |     || |        /  /\n" +
+                                    "     `r-._||/   __   /  /\n" +
+                                    " __,-<_     )`-/  `./  /\n" +
+                                    "'  \\   `---'   \\   /  /\n" +
+                                    "    |           |./  /\n" +
+                                    "    /           //  /\n" +
+                                    "\\_/' \\         |/  /\n" +
+                                    " |    |   _,^-'/  /\n" +
+                                    " |    , ``  (\\/  /_\n" +
+                                    "  \\,.->._    \\X-=/^\n" +
+                                    "  (  /   `-._//^`\n" +
+                                    "   `Y-.____(__}\n" +
+                                    "    |     {__)\n" +
+                                    "          ()");
                             break;
                         }
                         heroHealth -= enemyDamage;
@@ -195,6 +317,27 @@ public class ConsoleAdventureGame {
                         }
                         if (heroHealth <= 0) {
                             System.out.printf(ANSI_RED + "\n> %s has died.\n" + ANSI_RESET, playerName);
+                            System.out.println("...\n" +
+                                    "             ;::::;\n" +
+                                    "           ;::::; :;\n" +
+                                    "         ;:::::'   :;\n" +
+                                    "        ;:::::;     ;.\n" +
+                                    "       ,:::::'       ;           OOO\\\n" +
+                                    "       ::::::;       ;          OOOOO\\\n" +
+                                    "       ;:::::;       ;         OOOOOOOO\n" +
+                                    "      ,;::::::;     ;'         / OOOOOOO\n" +
+                                    "    ;:::::::::`. ,,,;.        /  / DOOOOOO\n" +
+                                    "  .';:::::::::::::::::;,     /  /     DOOOO\n" +
+                                    " ,::::::;::::::;;;;::::;,   /  /        DOOO\n" +
+                                    ";`::::::`'::::::;;;::::: ,#/  /          DOOO\n" +
+                                    ":`:::::::`;::::::;;::: ;::#  /            DOOO\n" +
+                                    "::`:::::::`;:::::::: ;::::# /              DOO\n" +
+                                    "`:`:::::::`;:::::: ;::::::#/               DOO\n" +
+                                    " :::`:::::::`;; ;:::::::::##                OO\n" +
+                                    " ::::`:::::::`;::::::::;:::#                OO\n" +
+                                    " `:::::`::::::::::::;'`:;::#                O\n" +
+                                    "  `:::::`::::::::;' /  / `:#\n" +
+                                    "   ::::::`:::::;'  /  /   `#");
                             break;
                         }
                     }
