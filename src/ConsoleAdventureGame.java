@@ -48,7 +48,6 @@ public class ConsoleAdventureGame {
                         if (randomNum > .5) {
                             mummyHealth -= strongAttack;
                             if (mummyHealth <= 0) mummyHealth = 0;
-                            System.out.println("\n---------------------------------------------\n");
                             System.out.printf("%s swings their sword and deals %d damage.\n", playerName, strongAttack);
                             System.out.println("\n[O\\\\\\\\\\[========================-\n");
                             System.out.printf("> Mummy's health: %d\n", mummyHealth);
@@ -56,7 +55,6 @@ public class ConsoleAdventureGame {
                         if (randomNum < .5) {
                             mummyHealth -= weakAttack;
                             if (mummyHealth <= 0) mummyHealth = 0;
-                            System.out.println("\n---------------------------------------------\n");
                             System.out.printf("%s shoots a bow and deals %d damage.\n", playerName, weakAttack);
                             System.out.println("\n>>>>>----------------------->\n");
                             System.out.printf("> Mummy's health: %d\n", mummyHealth);
@@ -67,7 +65,7 @@ public class ConsoleAdventureGame {
                         }
                         heroHealth -= enemyDamage;
                         if (heroHealth <= 0) heroHealth = 0;
-                        System.out.printf("\nMummy attacks back and deals %d damage.\n\n> %s's health: %d\n", enemyDamage, playerName, heroHealth);
+                        System.out.printf("\nMummy attacks back and deals %d damage.\n\n> %s's health: %d\n\n", enemyDamage, playerName, heroHealth);
                         while (potionRemaining > 0 && mummyHealth > heroHealth) {
                             System.out.println("\nWould you like to drink a potion to increase your health by 5? [Y/N]\n");
                             String potionDrink = scanner.next();
@@ -108,7 +106,6 @@ public class ConsoleAdventureGame {
                         if (randomNum > .5) {
                             dragonHealth -= strongAttack;
                             if (dragonHealth <= 0) dragonHealth = 0;
-                            System.out.println("\n---------------------------------------------\n");
                             System.out.printf("%s swings their sword and deals %d damage.\n", playerName, strongAttack);
                             System.out.println("\n[O\\\\\\\\\\[========================-\n");
                             System.out.printf("> Dragon's health: %d\n", dragonHealth);
@@ -116,7 +113,6 @@ public class ConsoleAdventureGame {
                         if (randomNum < .5) {
                             dragonHealth -= weakAttack;
                             if (dragonHealth <= 0) dragonHealth = 0;
-                            System.out.println("\n---------------------------------------------\n");
                             System.out.printf("%s shoots a bow and deals %d damage.\n", playerName, weakAttack);
                             System.out.println("\n>>>>>----------------------->\n");
                             System.out.printf("> Dragon's health: %d\n", dragonHealth);
@@ -127,7 +123,7 @@ public class ConsoleAdventureGame {
                         }
                         heroHealth -= enemyDamage;
                         if (heroHealth <= 0) heroHealth = 0;
-                        System.out.printf("\nThe dragon attacks back and deals %d damage.\n\n> %s's health: %d\n", enemyDamage, playerName, heroHealth);
+                        System.out.printf("\nThe dragon attacks back and deals %d damage.\n\n> %s's health: %d\n\n", enemyDamage, playerName, heroHealth);
                         while (potionRemaining > 0 && dragonHealth > heroHealth) {
                             System.out.println("\nWould you like to drink a potion to increase your health by 5? [Y/N]");
                             String potionDrink = scanner.next();
@@ -168,7 +164,6 @@ public class ConsoleAdventureGame {
                         if (randomNum > .5) {
                             ogreHealth -= strongAttack;
                             if (ogreHealth <= 0) ogreHealth = 0;
-                            System.out.println("\n---------------------------------------------\n");
                             System.out.printf("%s swings their sword and deals %d damage.\n", playerName, strongAttack);
                             System.out.println("\n[O\\\\\\\\\\[========================-\n");
                             System.out.printf("> Ogre's health: %d\n", ogreHealth);
@@ -176,7 +171,6 @@ public class ConsoleAdventureGame {
                         if (randomNum < .5) {
                             ogreHealth -= weakAttack;
                             if (ogreHealth <= 0) ogreHealth = 0;
-                            System.out.println("\n---------------------------------------------\n");
                             System.out.printf("%s shoots a bow and deals %d damage.\n", playerName, weakAttack);
                             System.out.println("\n>>>>>----------------------->\n");
                             System.out.printf("> Ogre's health: %d\n", ogreHealth);
@@ -187,7 +181,7 @@ public class ConsoleAdventureGame {
                         }
                         heroHealth -= enemyDamage;
                         if (heroHealth <= 0) heroHealth = 0;
-                        System.out.printf("\nThe ogre attacks back and deals %d damage.\n\n> %s's health: %d\n", enemyDamage, playerName, heroHealth);
+                        System.out.printf("\nThe ogre attacks back and deals %d damage.\n\n> %s's health: %d\n\n", enemyDamage, playerName, heroHealth);
                         while (potionRemaining > 0 && ogreHealth > heroHealth) {
                             System.out.println("\nWould you like to drink a potion to increase your health by 5? [Y/N]");
                             String potionDrink = scanner.next();
