@@ -106,7 +106,7 @@ public class ConsoleAdventureGame {
                         heroHealth -= enemyDamage;
                         if (heroHealth <= 0) heroHealth = 0;
                         System.out.printf("\nMummy attacks back and deals " + ANSI_PURPLE + "%d" + ANSI_RESET + " damage.\n\n> %s's health: " + ANSI_RED + "%d" + ANSI_RESET + "\n\n", enemyDamage, playerName, heroHealth);
-                        while (potionRemaining > 0 && mummyHealth > heroHealth) {
+                        while (potionRemaining > 0 && mummyHealth > heroHealth && heroHealth > 0) {
                             System.out.println("\nWould you like to drink a potion to increase your health by 5? [Y/N]\n");
                             String potionDrink = scanner.next();
                             if (potionDrink.equalsIgnoreCase("n")) break;
@@ -205,7 +205,7 @@ public class ConsoleAdventureGame {
                         heroHealth -= enemyDamage;
                         if (heroHealth <= 0) heroHealth = 0;
                         System.out.printf("\nDragon attacks back and deals " + ANSI_PURPLE + "%d" + ANSI_RESET + " damage.\n\n> %s's health: " + ANSI_RED + "%d" + ANSI_RESET + "\n\n", enemyDamage, playerName, heroHealth);
-                        while (potionRemaining > 0 && dragonHealth > heroHealth) {
+                        while (potionRemaining > 0 && dragonHealth > heroHealth && heroHealth > 0) {
                             System.out.println("\nWould you like to drink a potion to increase your health by 5? [Y/N]");
                             String potionDrink = scanner.next();
                             if (potionDrink.equalsIgnoreCase("n")) break;
@@ -304,7 +304,7 @@ public class ConsoleAdventureGame {
                         heroHealth -= enemyDamage;
                         if (heroHealth <= 0) heroHealth = 0;
                         System.out.printf("\nOgre attacks back and deals " + ANSI_PURPLE + "%d" + ANSI_RESET + " damage.\n\n> %s's health: " + ANSI_RED + "%d" + ANSI_RESET + "\n\n", enemyDamage, playerName, heroHealth);
-                        while (potionRemaining > 0 && ogreHealth > heroHealth) {
+                        while (potionRemaining > 0 && ogreHealth > heroHealth && heroHealth > 0) {
                             System.out.println("\nWould you like to drink a potion to increase your health by 5? [Y/N]");
                             String potionDrink = scanner.next();
                             if (potionDrink.equalsIgnoreCase("n")) break;
@@ -379,7 +379,7 @@ public class ConsoleAdventureGame {
     }
 
     public static int strongHeroAttackPower() {
-        int attackPower = (int) (Math.random() * 11) + 10;
+        int attackPower = (int) (Math.random() * 6) + 10;
         return attackPower;
     }
 
