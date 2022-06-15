@@ -42,9 +42,17 @@ public class ConsoleAdventureGame {
                     }
                     while (mummyHealth > 0 && heroHealth > 0) {
                         int enemyDamage = mummyAttackPower();
-                        int heroDamage = heroAttackPower();
-                        mummyHealth -= heroDamage;
-                        System.out.printf("You attacked the mummy and dealt %d damage.\nThe mummy has %d health remaining.\n", heroDamage, mummyHealth);
+                        int strongAttack = strongHeroAttackPower();
+                        int weakAttack = weakHeroAttackPower();
+                        double randomNum = Math.random();
+                        if (randomNum > .5) {
+                            mummyHealth -= strongAttack;
+                            System.out.printf("You hit the mummy with a strong attack and dealt %d damage.\nThe mummy has %d health remaining.\n", strongAttack, mummyHealth);
+                        }
+                        if (randomNum < .5) {
+                            mummyHealth -= weakAttack;
+                            System.out.printf("You hit the mummy with a weak attack and dealt %d damage.\nThe mummy has %d health remaining.\n", weakAttack, mummyHealth);
+                        }
                         if (mummyHealth <= 0) {
                             System.out.println("The mummy has died.");
                             break;
@@ -85,9 +93,17 @@ public class ConsoleAdventureGame {
                     }
                     while (dragonHealth > 0 && heroHealth > 0) {
                         int enemyDamage = dragonAttackPower();
-                        int heroDamage = heroAttackPower();
-                        dragonHealth -= heroDamage;
-                        System.out.printf("You attacked the dragon and dealt %d damage.\nThe dragon has %d health remaining.\n", heroDamage, dragonHealth);
+                        int strongAttack = strongHeroAttackPower();
+                        int weakAttack = weakHeroAttackPower();
+                        double randomNum = Math.random();
+                        if (randomNum > .5) {
+                            dragonHealth -= strongAttack;
+                            System.out.printf("You hit the dragon with a strong attack and dealt %d damage.\nThe dragon has %d health remaining.\n", strongAttack, dragonHealth);
+                        }
+                        if (randomNum < .5) {
+                            dragonHealth -= weakAttack;
+                            System.out.printf("You hit the dragon with a weak attack and dealt %d damage.\nThe dragon has %d health remaining.\n", weakAttack, dragonHealth);
+                        }
                         if (dragonHealth <= 0) {
                             System.out.println("The dragon has died.");
                             break;
@@ -128,9 +144,17 @@ public class ConsoleAdventureGame {
                     }
                     while (ogreHealth > 0 && heroHealth > 0) {
                         int enemyDamage = ogreAttackPower();
-                        int heroDamage = heroAttackPower();
-                        ogreHealth -= heroDamage;
-                        System.out.printf("You attacked the ogre and dealt %d damage.\nThe ogre has %d health remaining.\n", heroDamage, ogreHealth);
+                        int strongAttack = strongHeroAttackPower();
+                        int weakAttack = weakHeroAttackPower();
+                        double randomNum = Math.random();
+                        if (randomNum > .5) {
+                            ogreHealth -= strongAttack;
+                            System.out.printf("You hit the dragon with a strong attack and dealt %d damage.\nThe dragon has %d health remaining.\n", strongAttack, ogreHealth);
+                        }
+                        if (randomNum < .5) {
+                            ogreHealth -= weakAttack;
+                            System.out.printf("You hit the dragon with a weak attack and dealt %d damage.\nThe dragon has %d health remaining.\n", weakAttack, ogreHealth);
+                        }
                         if (ogreHealth <= 0) {
                             System.out.println("The ogre has died.");
                             break;
@@ -185,8 +209,13 @@ public class ConsoleAdventureGame {
         return attackPower;
     }
 
-    public static int heroAttackPower() {
+    public static int weakHeroAttackPower() {
         int attackPower = (int) (Math.random() * 10) + 1;
+        return attackPower;
+    }
+
+    public static int strongHeroAttackPower() {
+        int attackPower = (int) (Math.random() * 10) + 10;
         return attackPower;
     }
 

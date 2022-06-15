@@ -1,15 +1,15 @@
 public class HelloWorld {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
-
-        int myFavoriteNumber = 2;
-        System.out.println(myFavoriteNumber);
-
-        String myString = "Mike";
-        System.out.println(myString);
-
-        float myNumber = (float) 3.14;
-        System.out.println(myNumber);
+//        System.out.println("Hello, World!");
+//
+//        int myFavoriteNumber = 2;
+//        System.out.println(myFavoriteNumber);
+//
+//        String myString = "Mike";
+//        System.out.println(myString);
+//
+//        float myNumber = (float) 3.14;
+//        System.out.println(myNumber);
 
 //        int x = 5;
 //        System.out.println(x++);
