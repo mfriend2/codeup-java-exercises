@@ -25,6 +25,9 @@ public class ConsoleAdventureGame {
                 System.out.printf("\nWhere would you like to travel? [%s, %s, or %s]\n", ruins.toUpperCase(), castle.toUpperCase(), forest.toUpperCase());
                 String location = scanner.next();
                 System.out.printf("\n%s has chosen to travel to the %s.\n", playerName, location);
+
+                // MUMMY FIGHT BEGINS
+
                 if (location.equalsIgnoreCase("ruins")) {
                     System.out.println("\n> You encounter a mummy\n");
                     System.out.println("Would you like to run or attack? [RUN/ATTACK]");
@@ -33,6 +36,9 @@ public class ConsoleAdventureGame {
                         System.out.println(ANSI_RED + "\n> You were too afraid to fight. You have dishonored your family.\n" + ANSI_RESET);
                         break;
                     }
+
+                    // ARMOR CODE
+
                     System.out.println("\nWould you like to wear your armor? [Y/N]");
                     String wearArmor = scanner.next();
                     if (wearArmor.equalsIgnoreCase("y") && armorRemaining > 0) {
@@ -40,6 +46,9 @@ public class ConsoleAdventureGame {
                         armorRemaining--;
                         System.out.printf("\n> Your health has increased to " + ANSI_GREEN + "%d." + ANSI_RESET + " You have " + ANSI_RED + "%d" + ANSI_RESET + " armor remaining.\n\n", heroHealth, armorRemaining);
                     }
+
+                    // ATTACK SEQUENCES
+
                     while (mummyHealth > 0 && heroHealth > 0) {
                         int enemyDamage = mummyAttackPower();
                         int strongAttack = strongHeroAttackPower();
@@ -144,6 +153,9 @@ public class ConsoleAdventureGame {
                         }
                     }
                 }
+
+                // DRAGON FIGHT BEGINS
+
                 if (location.equalsIgnoreCase("castle")) {
                     System.out.println("\n> You encounter a dragon\n");
                     System.out.println("Would you like to run or attack? [RUN/ATTACK]");
@@ -152,6 +164,9 @@ public class ConsoleAdventureGame {
                         System.out.println(ANSI_RED + "\n> You were too afraid to fight. You have dishonored your family.\n" + ANSI_RESET);
                         break;
                     }
+
+                    // ARMOR CODE
+
                     System.out.println("\nWould you like to wear your armor? [Y/N]");
                     String wearArmor = scanner.next();
                     if (wearArmor.equalsIgnoreCase("y") && armorRemaining > 0) {
@@ -159,6 +174,9 @@ public class ConsoleAdventureGame {
                         armorRemaining--;
                         System.out.printf("\n> Your health has increased to " + ANSI_GREEN + "%d." + ANSI_RESET + " You have " + ANSI_RED + "%d" + ANSI_RESET + " armor remaining.\n\n", heroHealth, armorRemaining);
                     }
+
+                    // ATTACK SEQUENCES
+
                     while (dragonHealth > 0 && heroHealth > 0) {
                         int enemyDamage = dragonAttackPower();
                         int strongAttack = strongHeroAttackPower();
@@ -243,6 +261,9 @@ public class ConsoleAdventureGame {
                         }
                     }
                 }
+
+                // OGRE FIGHT BEGINS
+
                 if (location.equalsIgnoreCase("forest")) {
                     System.out.println("\n> You encounter an ogre");
                     System.out.println("\nWould you like to run or attack? [RUN/ATTACK]");
@@ -251,6 +272,9 @@ public class ConsoleAdventureGame {
                         System.out.println(ANSI_RED + "\n> You were too afraid to fight. You have dishonored your family.\n" + ANSI_RESET);
                         break;
                     }
+
+                    // ARMOR CODE
+
                     System.out.println("\nWould you like to wear your armor? [Y/N]");
                     String wearArmor = scanner.next();
                     if (wearArmor.equalsIgnoreCase("y") && armorRemaining > 0) {
@@ -258,6 +282,9 @@ public class ConsoleAdventureGame {
                         armorRemaining--;
                         System.out.printf("\n> Your health has increased to " + ANSI_GREEN + "%d." + ANSI_RESET + " You have " + ANSI_RED + "%d" + ANSI_RESET + " armor remaining.\n\n", heroHealth, armorRemaining);
                     }
+
+                    // ATTACK SEQUENCES
+
                     while (ogreHealth > 0 && heroHealth > 0) {
                         int enemyDamage = ogreAttackPower();
                         int strongAttack = strongHeroAttackPower();
