@@ -215,7 +215,7 @@ public class ConsoleAdventureGame {
     }
 
     public static int strongHeroAttackPower() {
-        int attackPower = (int) (Math.random() * 10) + 10;
+        int attackPower = (int) (Math.random() * 11) + 10;
         return attackPower;
     }
 
