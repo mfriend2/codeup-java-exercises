@@ -19,7 +19,7 @@ public class ConsoleAdventureGame {
             System.out.println("Do you want to start the game? [Y/N]");
             String startGame = scanner.next();
             while (startGame.equalsIgnoreCase("y")) {
-                System.out.println("\nEnter your first name:");
+                System.out.println("\nEnter your name:");
                 String playerName = scanner.next();
                 System.out.printf("\nAll Hail %s! Welcome to the Great Land of Code!\n", playerName);
                 System.out.printf("\nWhere would you like to travel? [%s, %s, or %s]\n", ruins.toUpperCase(), castle.toUpperCase(), forest.toUpperCase());
