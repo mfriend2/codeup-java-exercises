@@ -49,14 +49,14 @@ public class ConsoleAdventureGame {
                             mummyHealth -= strongAttack;
                             if (mummyHealth <= 0) mummyHealth = 0;
                             System.out.printf("%s swings their sword and deals %d damage.\n", playerName, strongAttack);
-                            System.out.println("\n[O\\\\\\\\\\[========================-\n");
+                            System.out.println("[O\\\\\\\\\\[========================-");
                             System.out.printf("> Mummy's health: %d\n", mummyHealth);
                         }
                         if (randomNum < .5) {
                             mummyHealth -= weakAttack;
                             if (mummyHealth <= 0) mummyHealth = 0;
                             System.out.printf("%s shoots a bow and deals %d damage.\n", playerName, weakAttack);
-                            System.out.println("\n>>>>>----------------------->\n");
+                            System.out.println(">>>>>----------------------->");
                             System.out.printf("> Mummy's health: %d\n", mummyHealth);
                         }
                         if (mummyHealth <= 0) {
@@ -107,14 +107,14 @@ public class ConsoleAdventureGame {
                             dragonHealth -= strongAttack;
                             if (dragonHealth <= 0) dragonHealth = 0;
                             System.out.printf("%s swings their sword and deals %d damage.\n", playerName, strongAttack);
-                            System.out.println("\n[O\\\\\\\\\\[========================-\n");
+                            System.out.println("[O\\\\\\\\\\[========================-");
                             System.out.printf("> Dragon's health: %d\n", dragonHealth);
                         }
                         if (randomNum < .5) {
                             dragonHealth -= weakAttack;
                             if (dragonHealth <= 0) dragonHealth = 0;
                             System.out.printf("%s shoots a bow and deals %d damage.\n", playerName, weakAttack);
-                            System.out.println("\n>>>>>----------------------->\n");
+                            System.out.println(">>>>>----------------------->");
                             System.out.printf("> Dragon's health: %d\n", dragonHealth);
                         }
                         if (dragonHealth <= 0) {
@@ -165,14 +165,14 @@ public class ConsoleAdventureGame {
                             ogreHealth -= strongAttack;
                             if (ogreHealth <= 0) ogreHealth = 0;
                             System.out.printf("%s swings their sword and deals %d damage.\n", playerName, strongAttack);
-                            System.out.println("\n[O\\\\\\\\\\[========================-\n");
+                            System.out.println("[O\\\\\\\\\\[========================-");
                             System.out.printf("> Ogre's health: %d\n", ogreHealth);
                         }
                         if (randomNum < .5) {
                             ogreHealth -= weakAttack;
                             if (ogreHealth <= 0) ogreHealth = 0;
                             System.out.printf("%s shoots a bow and deals %d damage.\n", playerName, weakAttack);
-                            System.out.println("\n>>>>>----------------------->\n");
+                            System.out.println(">>>>>----------------------->");
                             System.out.printf("> Ogre's health: %d\n", ogreHealth);
                         }
                         if (ogreHealth <= 0) {
