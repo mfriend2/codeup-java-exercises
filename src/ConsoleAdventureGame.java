@@ -48,12 +48,16 @@ public class ConsoleAdventureGame {
                         if (randomNum > .5) {
                             mummyHealth -= strongAttack;
                             if (mummyHealth <= 0) mummyHealth = 0;
-                            System.out.printf("%s used strong attack and dealt %d damage.\n> Mummy's health: %d\n", playerName, strongAttack, mummyHealth);
+                            System.out.printf("%s swings their sword and deals %d damage.\n", playerName, strongAttack);
+                            System.out.println("\n[O\\\\\\\\\\[========================-\n");
+                            System.out.printf("> Mummy's health: %d\n", mummyHealth);
                         }
                         if (randomNum < .5) {
                             mummyHealth -= weakAttack;
                             if (mummyHealth <= 0) mummyHealth = 0;
-                            System.out.printf("%s used weak attack and dealt %d damage.\n> Mummy's health: %d\n", playerName, weakAttack, mummyHealth);
+                            System.out.printf("%s shoots a bow and deals %d damage.\n", playerName, weakAttack);
+                            System.out.println("\n>>>>>----------------------->\n");
+                            System.out.printf("> Mummy's health: %d\n", mummyHealth);
                         }
                         if (mummyHealth <= 0) {
                             System.out.println("> The mummy has died.");
@@ -102,12 +106,16 @@ public class ConsoleAdventureGame {
                         if (randomNum > .5) {
                             dragonHealth -= strongAttack;
                             if (dragonHealth <= 0) dragonHealth = 0;
-                            System.out.printf("%s used strong attack and dealt %d damage.\n> Dragon's health: %d\n", playerName, strongAttack, dragonHealth);
+                            System.out.printf("%s swings their sword and deals %d damage.\n", playerName, strongAttack);
+                            System.out.println("\n[O\\\\\\\\\\[========================-\n");
+                            System.out.printf("> Dragon's health: %d\n", dragonHealth);
                         }
                         if (randomNum < .5) {
                             dragonHealth -= weakAttack;
                             if (dragonHealth <= 0) dragonHealth = 0;
-                            System.out.printf("%s used weak attack and dealt %d damage.\n> Dragon's health: %d\n", playerName, weakAttack, dragonHealth);
+                            System.out.printf("%s shoots a bow and deals %d damage.\n", playerName, weakAttack);
+                            System.out.println("\n>>>>>----------------------->\n");
+                            System.out.printf("> Dragon's health: %d\n", dragonHealth);
                         }
                         if (dragonHealth <= 0) {
                             System.out.println("> The dragon has died.");
@@ -156,12 +164,16 @@ public class ConsoleAdventureGame {
                         if (randomNum > .5) {
                             ogreHealth -= strongAttack;
                             if (ogreHealth <= 0) ogreHealth = 0;
-                            System.out.printf("%s used strong attack and dealt %d damage.\n> Ogre's health: %d\n", playerName, strongAttack, ogreHealth);
+                            System.out.printf("%s swings their sword and deals %d damage.\n", playerName, strongAttack);
+                            System.out.println("\n[O\\\\\\\\\\[========================-\n");
+                            System.out.printf("> Ogre's health: %d\n", ogreHealth);
                         }
                         if (randomNum < .5) {
                             ogreHealth -= weakAttack;
                             if (ogreHealth <= 0) ogreHealth = 0;
-                            System.out.printf("%s used weak attack and dealt %d damage.\n> Ogre's health: %d\n", playerName, weakAttack, ogreHealth);
+                            System.out.printf("%s shoots a bow and deals %d damage.\n", playerName, weakAttack);
+                            System.out.println("\n>>>>>----------------------->\n");
+                            System.out.printf("> Ogre's health: %d\n", ogreHealth);
                         }
                         if (ogreHealth <= 0) {
                             System.out.println("> The ogre has died.");
