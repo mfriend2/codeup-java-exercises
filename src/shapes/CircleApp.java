@@ -15,12 +15,12 @@ public class CircleApp {
 
         while (true) {
             Circle newCircle = new Circle(input.getDouble());
-            newCircle.setCirclesCreated(newCircle.getCirclesCreated() + 1);
+
             System.out.printf("The circle radius is: %.2f\n", newCircle.getRadius());
             System.out.printf("The circle area is: %.2f\n", newCircle.getArea());
             System.out.printf("The circle circumference is: %.2f\n", newCircle.getCircumference());
             if (input.yesNo() == false) {
-                System.out.printf("Circles created: %d",newCircle.getCirclesCreated());
+                System.out.printf("Circles created: %d", Circle.getCirclesCreated());
                 break;
             }
         }

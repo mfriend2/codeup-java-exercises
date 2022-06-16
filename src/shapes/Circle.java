@@ -3,7 +3,10 @@ package shapes;
 public class Circle {
     private double radius;
 
+    private static int circlesCreated = 0;
+
     public Circle(double radius) {
+        circlesCreated++;
         this.radius = radius;
     }
 
@@ -23,13 +26,9 @@ public class Circle {
         return 2 * Math.PI * this.radius;
     }
 
-    private static int circlesCreated = 0;
-
-    public int getCirclesCreated() {
+    public static int getCirclesCreated() {
         return circlesCreated;
     }
 
-    public void setCirclesCreated(int circlesCreated) {
-        this.circlesCreated = circlesCreated;
-    }
+
 }
