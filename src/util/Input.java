@@ -12,7 +12,7 @@ public class Input {
     }
 
     public boolean yesNo() {
-        System.out.println("Do you agree?");
+        System.out.println("Would you like to make another circle?");
         String input = scanner.next();
         if (input.equalsIgnoreCase("yes") || input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yeah")) {
             return true;
