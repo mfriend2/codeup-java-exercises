@@ -3,6 +3,7 @@ package movies;
 import java.util.Arrays;
 import java.util.Scanner;
 
+import static movies.Movie.addMovie;
 import static movies.MoviesArray.findAll;
 
 public class MoviesApplication {
@@ -10,7 +11,7 @@ public class MoviesApplication {
         Scanner scanner = new Scanner(System.in);
         Movie[] movies = findAll();
         while (true) {
-            System.out.println("Would you like to view all movies or by category?\n1 - View All Movies\n2 - View By Category\n3 - Exit Application");
+            System.out.println("Would you like to view all movies or by category?\n1 - View All Movies\n2 - View By Category\n3 - Add Movie\n4 - Exit Application");
             int choice = scanner.nextInt();
             if (choice == 1) {
                 for (Movie movie : movies) {
@@ -52,6 +53,14 @@ public class MoviesApplication {
                 }
             }
             if (choice == 3) {
+                System.out.println("Enter movie title");
+                scanner.nextLine();
+                String title = scanner.nextLine();
+                System.out.println("Enter genre");
+                String genre = scanner.next();
+                movies = addMovie(movies, new Movie(title, genre));
+            }
+            if (choice == 4) {
                 System.out.println("Thank you for using BlueBox!");
                 break;
             }
