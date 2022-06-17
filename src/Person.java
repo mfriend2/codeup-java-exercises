@@ -15,7 +15,7 @@ public class Person {
     }
 
     public String sayHello() {
-        return String.format("Hello %s!",this.name);
+        return String.format("Hello %s!", this.name);
     }
 
     public Person(String name) {
