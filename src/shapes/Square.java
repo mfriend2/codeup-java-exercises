@@ -21,11 +21,13 @@ public class Square extends Quadrilateral {
     @Override
     void setLength(double length) {
         this.length = length;
+        this.length = width;
     }
 
     @Override
     void setWidth(double width) {
         this.width = width;
+        this.width = length;
     }
 
 //    public double getArea() {
