@@ -31,6 +31,14 @@ public class Student {
         return average / grades.size();
     }
 
+    public double getClassAverage() {
+        double sum = 0;
+        for (double grade : grades) {
+            sum += grade;
+        }
+        return sum / grades.size();
+    }
+
     public ArrayList<Integer> getGrades() {
         return grades;
     }
