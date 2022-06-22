@@ -1,3 +1,5 @@
+package grocery;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -7,8 +9,15 @@ public class GroceryListApp {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Would you like to create a grocery list? [Y/N]");
         String decision = scanner.next();
-        HashMap<String, Integer> groceryItems = new HashMap<>();
-        HashMap<String, HashMap<String, Integer>> categories = new HashMap();
+        HashMap<String, ArrayList<GroceryItem>> categories = new HashMap();
+        ArrayList<GroceryItem> fruits = new ArrayList<>();
+        ArrayList<GroceryItem> vegetables = new ArrayList<>();
+        ArrayList<GroceryItem> dairy = new ArrayList<>();
+        ArrayList<GroceryItem> meats = new ArrayList<>();
+        ArrayList<GroceryItem> cannedGoods = new ArrayList<>();
+        ArrayList<GroceryItem> frozens = new ArrayList<>();
+        ArrayList<GroceryItem> boxedFood = new ArrayList<>();
+        ArrayList<GroceryItem> others = new ArrayList<>();
         if (decision.equalsIgnoreCase("y")) {
             while (true) {
                 System.out.println("Do you want to enter a new item? [Y/N]");
@@ -22,8 +31,9 @@ public class GroceryListApp {
                         String itemName = scanner.nextLine();
                         System.out.println("How many of " + itemName + " will you need?");
                         int amount = scanner.nextInt();
-                        groceryItems.put(itemName, amount);
-                        categories.put("Fruit",new HashMap<>());
+                        GroceryItem newItem = new GroceryItem(itemName, amount, "Fruits");
+                        fruits.add(newItem);
+                        categories.put("Fruit", fruits);
                     }
                     if (category == 2) {
                         System.out.println("Enter the name of the item:");
@@ -31,8 +41,9 @@ public class GroceryListApp {
                         String itemName = scanner.nextLine();
                         System.out.println("How many of " + itemName + " will you need?");
                         int amount = scanner.nextInt();
-                        groceryItems.put(itemName, amount);
-                        categories.put("Vegetables", groceryItems);
+                        GroceryItem newItem = new GroceryItem(itemName, amount, "Vegetables");
+                        vegetables.add(newItem);
+                        categories.put("Vegetables", vegetables);
                     }
                     if (category == 3) {
                         System.out.println("Enter the name of the item:");
@@ -40,8 +51,9 @@ public class GroceryListApp {
                         String itemName = scanner.nextLine();
                         System.out.println("How many of " + itemName + " will you need?");
                         int amount = scanner.nextInt();
-                        groceryItems.put(itemName, amount);
-                        categories.put("Dairy", groceryItems);
+                        GroceryItem newItem = new GroceryItem(itemName, amount, "Dairy");
+                        dairy.add(newItem);
+                        categories.put("Dairy", dairy);
                     }
                     if (category == 4) {
                         System.out.println("Enter the name of the item:");
@@ -49,8 +61,9 @@ public class GroceryListApp {
                         String itemName = scanner.nextLine();
                         System.out.println("How many of " + itemName + " will you need?");
                         int amount = scanner.nextInt();
-                        groceryItems.put(itemName, amount);
-                        categories.put("Meat", groceryItems);
+                        GroceryItem newItem = new GroceryItem(itemName, amount, "Meats");
+                        meats.add(newItem);
+                        categories.put("Meats", meats);
                     }
                     if (category == 5) {
                         System.out.println("Enter the name of the item:");
@@ -58,8 +71,9 @@ public class GroceryListApp {
                         String itemName = scanner.nextLine();
                         System.out.println("How many of " + itemName + " will you need?");
                         int amount = scanner.nextInt();
-                        groceryItems.put(itemName, amount);
-                        categories.put("Canned Good", groceryItems);
+                        GroceryItem newItem = new GroceryItem(itemName, amount, "Canned Goods");
+                        cannedGoods.add(newItem);
+                        categories.put("Canned Goods", cannedGoods);
                     }
                     if (category == 6) {
                         System.out.println("Enter the name of the item:");
@@ -67,8 +81,9 @@ public class GroceryListApp {
                         String itemName = scanner.nextLine();
                         System.out.println("How many of " + itemName + " will you need?");
                         int amount = scanner.nextInt();
-                        groceryItems.put(itemName, amount);
-                        categories.put("Frozen", groceryItems);
+                        GroceryItem newItem = new GroceryItem(itemName, amount, "Frozen");
+                        frozens.add(newItem);
+                        categories.put("Frozen", frozens);
                     }
                     if (category == 7) {
                         System.out.println("Enter the name of the item:");
@@ -76,8 +91,9 @@ public class GroceryListApp {
                         String itemName = scanner.nextLine();
                         System.out.println("How many of " + itemName + " will you need?");
                         int amount = scanner.nextInt();
-                        groceryItems.put(itemName, amount);
-                        categories.put("Boxed Foods", groceryItems);
+                        GroceryItem newItem = new GroceryItem(itemName, amount, "Boxed Food");
+                        boxedFood.add(newItem);
+                        categories.put("Boxed Food", boxedFood);
                     }
                     if (category == 8) {
                         System.out.println("Enter the name of the item:");
@@ -85,12 +101,17 @@ public class GroceryListApp {
                         String itemName = scanner.nextLine();
                         System.out.println("How many of " + itemName + " will you need?");
                         int amount = scanner.nextInt();
-                        groceryItems.put(itemName, amount);
-                        categories.put("Other", groceryItems);
+                        GroceryItem newItem = new GroceryItem(itemName, amount, "Other");
+                        others.add(newItem);
+                        categories.put("Other", others);
                     }
                 }
                 if (decision2.equalsIgnoreCase("n")) {
-                    System.out.println(categories);
+                    for (ArrayList<GroceryItem> value : categories.values()) {
+                        for (GroceryItem groceryItem : value) {
+                            System.out.println(groceryItem.getCategory() + " - " + groceryItem.getName() + " - " + groceryItem.getQuantity());
+                        }
+                    }
                     break;
                 }
             }
