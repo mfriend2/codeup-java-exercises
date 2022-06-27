@@ -7,7 +7,6 @@ public class Input {
 
     public String getString() {
         System.out.println("Enter a string.");
-        scanner.nextLine();
         return scanner.nextLine();
     }
 
@@ -31,9 +30,19 @@ public class Input {
         return input;
     }
 
+    int enteredInt;
+
     public int getInt() {
-        System.out.println("Enter a number.");
-        return scanner.nextInt();
+        System.out.println("Enter a whole number.");
+        try {
+            enteredInt = Integer.parseInt(getString());
+            System.out.println(enteredInt + " is an integer.");
+            return enteredInt;
+        } catch (Exception e) {
+            System.err.println("Uh oh you did not enter an integer!");
+            e.printStackTrace();
+            return getInt();
+        }
     }
 
     public double getDouble(double min, double max) {
@@ -46,8 +55,18 @@ public class Input {
         return input;
     }
 
+    double enteredDub;
+
     public double getDouble() {
         System.out.println("Enter a decimal number.");
-        return scanner.nextDouble();
+        try {
+            enteredDub = Double.parseDouble(getString());
+            System.out.println(enteredDub + " is a double.");
+            return enteredDub;
+        } catch (Exception e) {
+            System.err.println("Uh oh you did not enter a double!");
+            e.printStackTrace();
+            return getDouble();
+        }
     }
 }
